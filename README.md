@@ -21,12 +21,13 @@
 8) Конец
 
 2. Реализация программы
+   
 #include <stdio.h>
 #include <locale.h>
 
 int main() {
-    setlocale(LC_CTYPE, ".UTF8");
 
+	setlocale(LC_CTYPE, ".UTF8");
     float s = 390.0f;
     float rr_1 = 15.0f;
     float fe_1 = 36.0f;
@@ -42,8 +43,8 @@ int main() {
     printf("Стоимость поездки на Ford Escort: %.2f\n", fe_cost);
     printf("Денег сбережет, если поедет на машине Ford Escort: %.2f\n", rr_cost - fe_cost);
 
-    return 0;
-}
+    return 0;}
+
 4. Результаты работы программы
 Ввод:
 50
