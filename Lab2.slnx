@@ -1,0 +1,8 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="DZ2zadacha9/DZ2zadacha9.vcxproj" />
+  <Project Path="Lab2/Lab2.vcxproj" />
+</Solution>
