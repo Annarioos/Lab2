@@ -6,30 +6,37 @@
 1. Алгоритм и блок-схема
 ```mermaid
 graph TD
-    classDef startEnd fill:#f9f9f9,stroke:#333,stroke-width:2px,rx:12px;
-    classDef process fill:#fff,stroke:#333,stroke-width:2px;
-    classDef io fill:#fff,stroke:#333,stroke-width:2px;
+    %% Стилизация блоков
+    classDef startEnd fill:#ffffff,stroke:#333,stroke-width:2px,rx:10px,ry:10px;
+    classDef process fill:#ffffff,stroke:#333,stroke-width:2px;
+    classDef condition fill:#ffffff,stroke:#333,stroke-width:2px;
+    classDef io fill:#ffffff,stroke:#333,stroke-width:2px;
 
+    %% Описание узлов
     Start([Начало]):::startEnd
+    Cond1{Роллс-Ройс?}:::condition
     
-    Input[/Ввод: Стоимость галлона x/]:::io
+    CalcRR{"390/15*x"}:::condition
+    CalcFord{"390/36*x"}:::condition
     
-    CalcRR[y = 26 * x <br>Стоимость на Роллс-Ройсе]:::process
-    CalcFord[n = 10.83 * x <br>Стоимость на Форде]:::process
-    CalcSave[Сбережения = y - n <br>Сбережения = 15.17 * x]:::process
+    OutY[/Вывод: y/]:::io
+    OutN[/Вывод: n/]:::io
     
-    Output[/Вывод: y, Сбережения/]:::io
+    Save{Сбережет на Форде: y-n}:::condition
     End([Конец]):::startEnd
 
-    Start --> Input
-    Input --> CalcRR
-    CalcRR --> CalcFord
-    Ford рассчитвается автоматически --> CalcSave
-    CalcFord --> CalcSave
-    CalcSave --> Output
-    Output --> End
+    %% Связи
+    Start --> Cond1
+    Cond1 -- Да --> CalcRR
+    Cond1 -- Нет --> CalcFord
+    
+    CalcRR --> OutY
+    CalcFord --> OutN
+    
+    OutY --> Save
+    OutN --> Save
+    Save --> End
 ```
-
 
 1) Начало
 2) Объявить константы:
