@@ -13,7 +13,6 @@ graph TD
     CalcFE --> CalcDiff[Расчет сбережений на Форде:<br>Сбережет = y - n]
     CalcDiff --> Output[/Вывод результатов:<br>Стоимость на Rolls-Royce y<br>Стоимость на Ford Escort n<br>Сбережения y - n/]
     Output --> End([Конец])
-
     %% Настройка стилей для соответствия скриншоту %%
     %% Светлые контуры и текст блоков на темной подложке %%
     style Start fill:#ffffff,stroke:#ffffff,stroke-width:2px,color:#000000
@@ -23,7 +22,6 @@ graph TD
     style CalcDiff fill:#ffffff,stroke:#ffffff,stroke-width:2px,color:#000000
     style Output fill:#ffffff,stroke:#ffffff,stroke-width:2px,color:#000000
     style End fill:#ffffff,stroke:#ffffff,stroke-width:2px,color:#000000
-
     %% Настройка глобальных стрелок %%
     linkStyle default stroke:#ffffff,stroke-width:2px;
 
