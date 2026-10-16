@@ -4,25 +4,7 @@
 Человеку нужно съездить из Лондона в расположенный в 390 милях Эдинбург. Он может ехать на автомобиле марки “Роллс-Ройс” либо на автомобиле марки “Форд Эскорт”. “Роллс-Ройс” расходует 1 галлон бензина на каждые 15 миль пути. “Форд-Эскорт” расходует 1 галлон бензина на каждые 36 миль пути. Сколько будет стоить поездка в Эдинбург на “Роллс-Ройсе”, если стоимость 1 галлона бензина составляет х фунтов? Сколько денег он сбережет, если вместо этого поедет на машине марки “Форд-Эскорт”.
 
 1. Алгоритм и блок-схема
-graph TD
-    Start([Начало]) --> Input[/Ввод стоимости галлона бензина: x/]
-    Input --> CalcRR[Расчет поездки на Роллс-Ройсе:<br>rr_cost = 390 / 15 * x]
-    CalcRR --> CalcFE[Расчет поездки на Форд Эскорт:<br>fe_cost = 390 / 36 * x]
-    CalcFE --> CalcSave[Расчет сбережений на Форде:<br>saved_money = rr_cost - fe_cost]
-    CalcSave --> Output[/Вывод результатов:<br>rr_cost, fe_cost, saved_money/]
-    Output --> End([Конец])
 
-    %% Стилизация под темную тему как на вашем скрине %%
-    theme dark
-    style Start fill:#ffffff,stroke:#888888,stroke-width:2px,stroke-dasharray: none,color:#000000
-    style End fill:#ffffff,stroke:#888888,stroke-width:2px,stroke-dasharray: none,color:#000000
-    style Input fill:#ffffff,stroke:#888888,stroke-width:2px,color:#000000
-    style Output fill:#ffffff,stroke:#888888,stroke-width:2px,color:#000000
-    style CalcRR fill:#ffffff,stroke:#888888,stroke-width:2px,color:#000000
-    style CalcFE fill:#ffffff,stroke:#888888,stroke-width:2px,color:#000000
-    style CalcSave fill:#ffffff,stroke:#888888,stroke-width:2px,color:#000000
-    
-    classDef default fill:#1e1e1e,stroke:#ffffff,stroke-width:1px,color:#ffffff;
 
 
 1) Начало
