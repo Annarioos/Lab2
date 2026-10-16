@@ -6,15 +6,15 @@
 1. Алгоритм и блок-схема
 ```mermaid
 graph TD
-    %% Шаги алгоритма в виде чистых текстовых действий
-    Start([Начало]) --> Input[/Ввести x/]
+    %% Шаги последовательного алгоритма решения задачи
+    Start([Начало]) --> Input[/Ввести стоимость 1 галлона бензина x/]
     Input --> CalcRR[Вычислить стоимость поездки на Rolls-Royce y]
     CalcRR --> CalcFE[Вычислить стоимость поездки на Ford Escort n]
-    CalcFE --> CalcDiff[Вычислить сумму сбережений]
-    CalcDiff --> Output[/Вывести y, n и сумму сбережений/]
+    CalcFE --> CalcDiff[Вычислить разность стоимостей для определения сбережений]
+    CalcDiff --> Output[/Вывести стоимости поездок и сумму сбережений/]
     Output --> End([Конец])
 
-    %% Стилизация под темную тему GitHub (светлые блоки с черным текстом)
+    %% Стилизация блоков (светлые блоки с черным текстом для темной темы GitHub)
     style Start fill:#ffffff,stroke:#ffffff,stroke-width:2px,color:#000000
     style Input fill:#ffffff,stroke:#ffffff,stroke-width:2px,color:#000000
     style CalcRR fill:#ffffff,stroke:#ffffff,stroke-width:2px,color:#000000
@@ -23,9 +23,10 @@ graph TD
     style Output fill:#ffffff,stroke:#ffffff,stroke-width:2px,color:#000000
     style End fill:#ffffff,stroke:#ffffff,stroke-width:2px,color:#000000
 
-    %% Настройка соединительных линий
+    %% Стилизация соединительных стрелок
     linkStyle default stroke:#ffffff,stroke-width:2px;
 ```
+
 1) Начало
 2) Объявить константы:
 	• s = 390.0 — расстояние между Лондоном и Эдинбургом (в милях).
