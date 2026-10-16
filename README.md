@@ -6,16 +6,18 @@
 1. Алгоритм и блок-схема
 ```mermaid
 graph TD
-    %% Шаги последовательного алгоритма решения задачи
-    Start([Начало]) --> Input[/Ввести стоимость 1 галлона бензина x/]
-    Input --> CalcRR[Вычислить стоимость поездки на Rolls-Royce y]
-    CalcRR --> CalcFE[Вычислить стоимость поездки на Ford Escort n]
-    CalcFE --> CalcDiff[Вычислить разность стоимостей для определения сбережений]
-    CalcDiff --> Output[/Вывести стоимости поездок и сумму сбережений/]
+    %% Шаги последовательного алгоритма задачи про автомобили
+    Start([Начало]) --> Init[Инициализировать константы:<br>расстояние 390 миль, расход Роллс-Ройса 15 миль на галлон, расход Форда 36 миль на галлон]
+    Init --> Input[/Ввести стоимость 1 галлона бензина x/]
+    Input --> CalcRR[Вычислить стоимость поездки на Rolls-Royce]
+    CalcRR --> CalcFE[Вычислить стоимость поездки на Ford Escort]
+    CalcFE --> CalcDiff[Вычислить сумму сбережений при выборе Ford Escort]
+    CalcDiff --> Output[/Вывести стоимости поездок для каждой машины и сумму сбережений/]
     Output --> End([Конец])
 
-    %% Стилизация блоков (светлые блоки с черным текстом для темной темы GitHub)
+    %% Стилизация блоков под темную тему GitHub (светлые блоки с черным текстом)
     style Start fill:#ffffff,stroke:#ffffff,stroke-width:2px,color:#000000
+    style Init fill:#ffffff,stroke:#ffffff,stroke-width:2px,color:#000000
     style Input fill:#ffffff,stroke:#ffffff,stroke-width:2px,color:#000000
     style CalcRR fill:#ffffff,stroke:#ffffff,stroke-width:2px,color:#000000
     style CalcFE fill:#ffffff,stroke:#ffffff,stroke-width:2px,color:#000000
@@ -26,6 +28,7 @@ graph TD
     %% Стилизация соединительных стрелок
     linkStyle default stroke:#ffffff,stroke-width:2px;
 ```
+
 
 1) Начало
 2) Объявить константы:
