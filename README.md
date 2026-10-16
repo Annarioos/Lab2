@@ -4,39 +4,20 @@
 Человеку нужно съездить из Лондона в расположенный в 390 милях Эдинбург. Он может ехать на автомобиле марки “Роллс-Ройс” либо на автомобиле марки “Форд Эскорт”. “Роллс-Ройс” расходует 1 галлон бензина на каждые 15 миль пути. “Форд-Эскорт” расходует 1 галлон бензина на каждые 36 миль пути. Сколько будет стоить поездка в Эдинбург на “Роллс-Ройсе”, если стоимость 1 галлона бензина составляет х фунтов? Сколько денег он сбережет, если вместо этого поедет на машине марки “Форд-Эскорт”.
 
 1. Алгоритм и блок-схема
-```mermaid
 graph TD
-    %% Стилизация блоков
-    classDef startEnd fill:#ffffff,stroke:#333,stroke-width:2px,rx:10px,ry:10px;
-    classDef process fill:#ffffff,stroke:#333,stroke-width:2px;
-    classDef condition fill:#ffffff,stroke:#333,stroke-width:2px;
-    classDef io fill:#ffffff,stroke:#333,stroke-width:2px;
+    Start([Начало]) --> Input[/Ввод стоимости 1 галлона бензина: x/]
+    Input --> CalcCosts[Расчет стоимости поездок:<br>rr_cost = 390 / 15 * x<br>fe_cost = 390 / 36 * x]
+    CalcCosts --> CalcDiff[Расчет экономии:<br>saved_money = rr_cost - fe_cost]
+    CalcDiff --> Output[/Вывод результатов:<br>rr_cost, fe_cost, saved_money/]
+    Output --> End([Конец])
 
-    %% Описание узлов
-    Start([Начало]):::startEnd
-    Cond1{Роллс-Ройс?}:::condition
-    
-    CalcRR{"390/15*x"}:::condition
-    CalcFord{"390/36*x"}:::condition
-    
-    OutY[/Вывод: y/]:::io
-    OutN[/Вывод: n/]:::io
-    
-    Save{Сбережет на Форде: y-n}:::condition
-    End([Конец]):::startEnd
-
-    %% Связи
-    Start --> Cond1
-    Cond1 -- Да --> CalcRR
-    Cond1 -- Нет --> CalcFord
-    
-    CalcRR --> OutY
-    CalcFord --> OutN
-    
-    OutY --> Save
-    OutN --> Save
-    Save --> End
-```
+    %% Стилизация для красивого отображения в темной и светлой темах GitHub %%
+    style Start fill:#f9f,stroke:#333,stroke-width:2px
+    style End fill:#f9f,stroke:#333,stroke-width:2px
+    style Input fill:#bbf,stroke:#333,stroke-width:1px
+    style Output fill:#bbf,stroke:#333,stroke-width:1px
+    style CalcCosts fill:#fff,stroke:#333,stroke-width:1px
+    style CalcDiff fill:#fff,stroke:#333,stroke-width:1px
 
 1) Начало
 2) Объявить константы:
