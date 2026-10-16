@@ -4,6 +4,28 @@
 Человеку нужно съездить из Лондона в расположенный в 390 милях Эдинбург. Он может ехать на автомобиле марки “Роллс-Ройс” либо на автомобиле марки “Форд Эскорт”. “Роллс-Ройс” расходует 1 галлон бензина на каждые 15 миль пути. “Форд-Эскорт” расходует 1 галлон бензина на каждые 36 миль пути. Сколько будет стоить поездка в Эдинбург на “Роллс-Ройсе”, если стоимость 1 галлона бензина составляет х фунтов? Сколько денег он сбережет, если вместо этого поедет на машине марки “Форд-Эскорт”.
 
 1. Алгоритм и блок-схема
+```mermaid
+graph TD
+    %% Шаги алгоритма
+    Start([Начало]) --> Input[/Ввод стоимости 1 галлона бензина: x/]
+    Input --> CalcRR[Расчет стоимости поездки на Rolls-Royce:<br>y = 390 / 15 * x]
+    CalcRR --> CalcFE[Расчет стоимости поездки на Ford Escort:<br>n = 390 / 36 * x]
+    CalcFE --> CalcDiff[Расчет сбережений:<br>Сбережет = y - n]
+    CalcDiff --> Output[/Вывод результатов:<br>Стоимость на Rolls-Royce: y<br>Стоимость на Ford Escort: n<br>Сбережения: y - n/]
+    Output --> End([Конец])
+
+    %% Стилизация под темную тему GitHub (светлые блоки с черным текстом)
+    style Start fill:#ffffff,stroke:#ffffff,stroke-width:2px,color:#000000
+    style Input fill:#ffffff,stroke:#ffffff,stroke-width:2px,color:#000000
+    style CalcRR fill:#ffffff,stroke:#ffffff,stroke-width:2px,color:#000000
+    style CalcFE fill:#ffffff,stroke:#ffffff,stroke-width:2px,color:#000000
+    style CalcDiff fill:#ffffff,stroke:#ffffff,stroke-width:2px,color:#000000
+    style Output fill:#ffffff,stroke:#ffffff,stroke-width:2px,color:#000000
+    style End fill:#ffffff,stroke:#ffffff,stroke-width:2px,color:#000000
+
+    %% Настройка соединительных линий
+    linkStyle default stroke:#ffffff,stroke-width:2px;
+```
 
 
 
