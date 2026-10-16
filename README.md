@@ -6,7 +6,6 @@
 1. Алгоритм и блок-схема
 ```mermaid
 graph TD
-    %% Шаги последовательного алгоритма задачи с формулами
     Start([Начало]) --> Init[Инициализировать константы:<br>s = 390.0, rr_1 = 15.0, fe_1 = 36.0]
     Init --> Input[/Ввести стоимость 1 галлона бензина x/]
     Input --> CalcRR[Вычислить стоимость поездки на Rolls-Royce:<br>rr_cost = s / rr_1 * x]
@@ -15,7 +14,6 @@ graph TD
     CalcDiff --> Output[/Вывести результаты расчетов:<br>rr_cost, fe_cost, Сбережения/]
     Output --> End([Конец])
 
-    %% Стилизация блоков под темную тему GitHub (светлые блоки с черным текстом)
     style Start fill:#ffffff,stroke:#ffffff,stroke-width:2px,color:#000000
     style Init fill:#ffffff,stroke:#ffffff,stroke-width:2px,color:#000000
     style Input fill:#ffffff,stroke:#ffffff,stroke-width:2px,color:#000000
@@ -25,7 +23,7 @@ graph TD
     style Output fill:#ffffff,stroke:#ffffff,stroke-width:2px,color:#000000
     style End fill:#ffffff,stroke:#ffffff,stroke-width:2px,color:#000000
 
-    %% Стилизация соединительных стрелок
+
     linkStyle default stroke:#ffffff,stroke-width:2px;
 ```
 
