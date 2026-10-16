@@ -5,25 +5,7 @@
 
 1. Алгоритм и блок-схема
 
-graph TD
-    %% Основная цепочка блоков алгоритма задачи %%
-    Start([Начало]) --> Input[/Ввод стоимости 1 галлона бензина: x/]
-    Input --> CalcRR[Расчет стоимости поездки на Rolls-Royce:<br>y = 390 / 15 * x]
-    CalcRR --> CalcFE[Расчет стоимости поездки на Ford Escort:<br>n = 390 / 36 * x]
-    CalcFE --> CalcDiff[Расчет сбережений на Форде:<br>Сбережет = y - n]
-    CalcDiff --> Output[/Вывод результатов:<br>Стоимость на Rolls-Royce y<br>Стоимость на Ford Escort n<br>Сбережения y - n/]
-    Output --> End([Конец])
-    %% Настройка стилей для соответствия скриншоту %%
-    %% Светлые контуры и текст блоков на темной подложке %%
-    style Start fill:#ffffff,stroke:#ffffff,stroke-width:2px,color:#000000
-    style Input fill:#ffffff,stroke:#ffffff,stroke-width:2px,color:#000000
-    style CalcRR fill:#ffffff,stroke:#ffffff,stroke-width:2px,color:#000000
-    style CalcFE fill:#ffffff,stroke:#ffffff,stroke-width:2px,color:#000000
-    style CalcDiff fill:#ffffff,stroke:#ffffff,stroke-width:2px,color:#000000
-    style Output fill:#ffffff,stroke:#ffffff,stroke-width:2px,color:#000000
-    style End fill:#ffffff,stroke:#ffffff,stroke-width:2px,color:#000000
-    %% Настройка глобальных стрелок %%
-    linkStyle default stroke:#ffffff,stroke-width:2px;
+
 
 1) Начало
 2) Объявить константы:
